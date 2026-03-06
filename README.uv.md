@@ -4,7 +4,7 @@ This guide uses only `uv` and `uvx`. It does not require Poetry for building, ru
 
 ## Prerequisites
 
-1. Python 3.14 or another supported Python installed locally
+1. Python 3.9 or newer installed locally
 1. `uv` installed from [Astral](https://docs.astral.sh/uv/)
 1. Neo4j only if you intend to use `primport save` or `primport reset db`
 
@@ -51,7 +51,7 @@ Save the cached graph to Neo4j:
 uvx --refresh --from . primport save
 ```
 
-Export the cached graph to GraphML:
+Export the cached graph to GraphML with NetworkX's built-in GraphML writer:
 
 ```bash
 uvx --refresh --from . primport export graphml ./primport-cache.graphml
