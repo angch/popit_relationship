@@ -12,3 +12,9 @@ def test_sync_succeeds():
     runner = click.testing.CliRunner()
     result = runner.invoke(primport.sync)
     assert result.exit_code == 0
+
+
+def test_export_succeeds():
+    runner = click.testing.CliRunner()
+    result = runner.invoke(primport.export)
+    assert result.exit_code == 0
